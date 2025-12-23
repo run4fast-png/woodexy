@@ -2,5 +2,45 @@
   "HomePage": {
     "title": "Welcome to Woodexy",
     "description": "The best place to find wood."
+  },
+  "Auth": {
+    "login": "Login",
+    "login_desc": "Enter your email below to login to your account",
+    "signup": "Sign up",
+    "signup_desc": "Choose your role and enter your details below",
+    "email": "Email",
+    "email_placeholder": "m@example.com",
+    "password": "Password",
+    "forgot_password": "Forgot your password?",
+    "login_google": "Login with Google",
+    "no_account": "Don't have an account?",
+    "has_account": "Already have an account?",
+    "create_account": "Create Account",
+    "role_buyer": "Buyer",
+    "role_supplier": "Supplier"
+  },
+  "Layout": {
+    "dashboard": "Dashboard",
+    "marketplace": "Marketplace",
+    "orders": "Orders",
+    "inbox": "Inbox",
+    "settings": "Settings",
+    "support": "Support",
+    "logout": "Logout",
+    "login": "Login",
+    "signup": "Sign Up",
+    "copyright": "Built by Woodexy. The source code is available on {github}."
+  },
+  "Marketplace": {
+      "filters_title": "Filters",
+      "species": "Wood Species",
+      "origin": "Origin",
+      "price_range": "Price Range ($/m3)",
+      "apply_filters": "Apply Filters",
+      "search_placeholder": "Search species, origin...",
+      "price": "Price:",
+      "dims": "Dims:",
+      "view_details": "View Details",
+      "verified_supplier": "Verified Supplier"
   }
 }

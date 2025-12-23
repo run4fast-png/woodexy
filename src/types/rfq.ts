@@ -21,7 +21,7 @@ export interface RFQMessage {
   thread_id: string;
   sender_id: string;
   message: string;
-  attachments?: any;
-  meta?: any;
+  attachments?: Record<string, unknown> | null;
+  meta?: Record<string, unknown> | null;
   read_at?: string;
 }

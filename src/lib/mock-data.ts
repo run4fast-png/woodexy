@@ -17,7 +17,7 @@ export const MOCK_PRODUCTS: Product[] = [
       moisture: "10-12%"
     },
     description: "High-quality American Oak planks suitable for furniture and flooring. Kiln-dried and ready for immediate use.",
-    images: ["/placeholder-wood-1.jpg"],
+    images: ["/placeholder-wood.svg"],
     inStock: true,
     supplier: {
         id: "sup-1",
@@ -41,7 +41,7 @@ export const MOCK_PRODUCTS: Product[] = [
       moisture: "16-18%"
     },
     description: "Durable Siberian Larch perfect for outdoor decking. Naturally resistant to decay.",
-    images: ["/placeholder-wood-2.jpg"],
+    images: ["/placeholder-wood.svg"],
     inStock: true,
     supplier: {
         id: "sup-2",
@@ -65,7 +65,7 @@ export const MOCK_PRODUCTS: Product[] = [
       moisture: "8-10%"
     },
     description: "Hard Maple lumber with excellent strength and minimal defects. Ideal for high-end cabinetry.",
-    images: ["/placeholder-wood-3.jpg"],
+    images: ["/placeholder-wood.svg"],
     inStock: true,
     supplier: {
         id: "sup-3",
@@ -89,7 +89,7 @@ export const MOCK_PRODUCTS: Product[] = [
       moisture: "12%"
     },
     description: "Extremely hard and dense Brazilian Walnut, also known as Ipe. Best for exterior structures.",
-    images: ["/placeholder-wood-4.jpg"],
+    images: ["/placeholder-wood.svg"],
     inStock: false,
     supplier: {
         id: "sup-4",
@@ -113,7 +113,7 @@ export const MOCK_PRODUCTS: Product[] = [
       moisture: "12-14%"
     },
     description: "Steam-treated European Beech. Great workability and uniform color.",
-    images: ["/placeholder-wood-5.jpg"],
+    images: ["/placeholder-wood.svg"],
     inStock: true,
     supplier: {
         id: "sup-5",

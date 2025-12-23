@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter }
 import { Label } from "@/components/ui/label";
 import { Link } from "@/i18n/navigation";
 import { login } from "../actions";
+import { getTranslations } from 'next-intl/server';
 
 export default async function LoginPage({
   searchParams,
@@ -11,32 +12,34 @@ export default async function LoginPage({
   searchParams: Promise<{ message: string }>;
 }) {
   const { message } = await searchParams;
+  const t = await getTranslations('Auth');
+
   return (
     <div className="flex min-h-screen items-center justify-center p-4">
       <Card className="w-full max-w-sm">
         <CardHeader>
-          <CardTitle className="text-2xl">Login</CardTitle>
+          <CardTitle className="text-2xl">{t('login')}</CardTitle>
           <CardDescription>
-            Enter your email below to login to your account
+            {t('login_desc')}
           </CardDescription>
         </CardHeader>
         <CardContent>
           <form action={login} className="grid gap-4">
             <div className="grid gap-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">{t('email')}</Label>
               <Input
                 id="email"
                 name="email"
                 type="email"
-                placeholder="m@example.com"
+                placeholder={t('email_placeholder')}
                 required
               />
             </div>
             <div className="grid gap-2">
               <div className="flex items-center">
-                <Label htmlFor="password">Password</Label>
+                <Label htmlFor="password">{t('password')}</Label>
                 <Link href="#" className="ml-auto inline-block text-sm underline">
-                  Forgot your password?
+                  {t('forgot_password')}
                 </Link>
               </div>
               <Input id="password" name="password" type="password" required />
@@ -45,17 +48,17 @@ export default async function LoginPage({
                 <p className="text-sm text-red-500 text-center">{message}</p>
             )}
             <Button type="submit" className="w-full">
-              Login
+              {t('login')}
             </Button>
             <Button variant="outline" className="w-full">
-              Login with Google
+              {t('login_google')}
             </Button>
           </form>
         </CardContent>
         <CardFooter className="justify-center text-sm">
-             Don&apos;t have an account?{" "}
+             {t('no_account')}{" "}
             <Link href="/signup" className="underline ml-1">
-              Sign up
+              {t('signup')}
             </Link>
         </CardFooter>
       </Card>

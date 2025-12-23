@@ -2,5 +2,45 @@
   "HomePage": {
     "title": "مرحباً بكم في ووديكسي",
     "description": "أفضل مكان للعثور على الأخشاب."
+  },
+  "Auth": {
+    "login": "تسجيل الدخول",
+    "login_desc": "أدخل بريدك الإلكتروني لتسجيل الدخول",
+    "signup": "إنشاء حساب",
+    "signup_desc": "اختر نوع الحساب وأدخل بياناتك أدناه",
+    "email": "البريد الإلكتروني",
+    "email_placeholder": "m@example.com",
+    "password": "كلمة المرور",
+    "forgot_password": "نسيت كلمة المرور؟",
+    "login_google": "الدخول باستخدام Google",
+    "no_account": "ليس لديك حساب؟",
+    "has_account": "لديك حساب بالفعل؟",
+    "create_account": "إنشاء حساب",
+    "role_buyer": "مشتري",
+    "role_supplier": "مورد"
+  },
+  "Layout": {
+    "dashboard": "لوحة التحكم",
+    "marketplace": "المتجر",
+    "orders": "الطلبات",
+    "inbox": "الرسائل",
+    "settings": "الإعدادات",
+    "support": "الدعم الفني",
+    "logout": "تسجيل الخروج",
+    "login": "دخول",
+    "signup": "تسجيل",
+    "copyright": "تم التطوير بواسطة Woodexy. الكود المصدري متاح على {github}."
+  },
+  "Marketplace": {
+      "filters_title": "تصنيفات",
+      "species": "نوع الخشب",
+      "origin": "المصدر",
+      "price_range": "نطاق السعر ($/m3)",
+      "apply_filters": "تطبيق الفلاتر",
+      "search_placeholder": "ابحث عن نوع الخشب، المصدر...",
+      "price": "السعر:",
+      "dims": "الأبعاد:",
+      "view_details": "عرض التفاصيل",
+      "verified_supplier": "مورد موثوق"
   }
 }

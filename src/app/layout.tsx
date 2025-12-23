@@ -2,6 +2,13 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getLocale, getMessages} from 'next-intl/server';
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner"
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Woodexy | Global Wood Marketplace",
+  description: "Connect with verified timber suppliers and buyers worldwide.",
+};
+
  
 export default async function RootLayout({
   children

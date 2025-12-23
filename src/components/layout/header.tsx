@@ -5,6 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, Package2, User } from "lucide-react"
 import { createClient } from "@/lib/supabase/server"
 import { signout } from "@/app/(auth)/signout"
+import { getTranslations } from "next-intl/server"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,6 +18,7 @@ import {
 export async function Header() {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
+  const t = await getTranslations("Layout")
   
   // Fetch unread count if user exists
   let unreadCount = 0
@@ -51,7 +53,7 @@ export async function Header() {
           href="/marketplace"
           className="text-foreground transition-colors hover:text-foreground"
         >
-          Marketplace
+          {t('marketplace')}
         </Link>
         {user && (
             <>
@@ -59,13 +61,13 @@ export async function Header() {
                 href="/dashboard"
                 className="text-muted-foreground transition-colors hover:text-foreground"
                 >
-                Dashboard
+                {t('dashboard')}
                 </Link>
                 <Link
                 href="/orders"
                 className="text-muted-foreground transition-colors hover:text-foreground"
                 >
-                Orders
+                {t('orders')}
                 </Link>
             </>
         )}
@@ -94,7 +96,7 @@ export async function Header() {
               href="/marketplace"
               className="hover:text-foreground"
             >
-              Marketplace
+              {t('marketplace')}
             </Link>
              {user && (
                 <>
@@ -102,13 +104,13 @@ export async function Header() {
                     href="/dashboard"
                     className="text-muted-foreground hover:text-foreground"
                     >
-                    Dashboard
+                    {t('dashboard')}
                     </Link>
                     <Link
                     href="/orders"
                     className="text-muted-foreground hover:text-foreground"
                     >
-                    Orders
+                    {t('orders')}
                     </Link>
                 </>
             )}
@@ -140,16 +142,16 @@ export async function Header() {
                   <DropdownMenuSeparator />
                   <DropdownMenuItem asChild>
                     <Link href="/dashboard/buyer/inbox">
-                        Inbox 
+                        {t('inbox')}
                         {unreadCount > 0 && <span className="ml-auto text-xs bg-red-100 text-red-600 px-1 rounded">{unreadCount}</span>}
                     </Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem>Settings</DropdownMenuItem>
-                  <DropdownMenuItem>Support</DropdownMenuItem>
+                  <DropdownMenuItem>{t('settings')}</DropdownMenuItem>
+                  <DropdownMenuItem>{t('support')}</DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <form action={signout}>
                       <button type="submit" className="w-full text-left">
-                        <DropdownMenuItem>Logout</DropdownMenuItem>
+                        <DropdownMenuItem>{t('logout')}</DropdownMenuItem>
                       </button>
                   </form>
                 </DropdownMenuContent>
@@ -157,10 +159,10 @@ export async function Header() {
         ) : (
             <div className="flex gap-2">
                  <Button variant="ghost" asChild>
-                    <Link href="/login">Login</Link>
+                    <Link href="/login">{t('login')}</Link>
                  </Button>
                  <Button asChild>
-                    <Link href="/signup">Sign Up</Link>
+                    <Link href="/signup">{t('signup')}</Link>
                  </Button>
             </div>
         )}

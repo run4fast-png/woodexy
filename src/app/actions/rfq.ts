@@ -1,7 +1,7 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
-import { redirect } from "@/i18n/navigation";
+
 import { revalidatePath } from "next/cache";
 
 export async function createThread(formData: FormData) {

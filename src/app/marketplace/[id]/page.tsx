@@ -3,7 +3,7 @@ import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table" // Need to install Table
+import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table" // Need to install Table
 import { ArrowLeft, Share2, Heart } from "lucide-react"
 import { Link } from "@/i18n/navigation"
 import { RequestQuoteModal } from "@/components/rfq/request-quote-modal"

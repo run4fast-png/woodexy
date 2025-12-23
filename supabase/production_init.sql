@@ -12,7 +12,7 @@ create table rfq_threads (
   status text not null default 'open' check (status in ('open', 'replied', 'closed', 'cancelled')),
   product_id text, -- Changed from UUID to Text and removed FK for Mock Data compatibility
   buyer_id uuid references auth.users(id) not null,
-  supplier_id uuid not null, -- Removed FK to auth.users if supplier dummy IDs are used, OR keep if we strictly create users. 
+  supplier_id text not null, -- Changed to text to allow dummy IDs like "dummy-supplier-uuid" 
                              -- The Modal uses "dummy-supplier-uuid". This will FAIL FK check if that user doesn't exist in auth.users.
                              -- FIX: Changing this to text to allow the dummy ID "dummy-supplier-uuid"
   subject text,

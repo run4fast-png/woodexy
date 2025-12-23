@@ -2,7 +2,7 @@ import { RFQThread } from "@/types/rfq"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Link } from "@/i18n/navigation" // Using next-intl link
-import { formatDistanceToNow } from "date-fns" // Optional: install date-fns
+
 
 interface InboxListProps {
   threads: RFQThread[]
@@ -10,7 +10,7 @@ interface InboxListProps {
   userRole: "buyer" | "supplier"
 }
 
-export function InboxList({ threads, currentUserId, userRole }: InboxListProps) {
+export function InboxList({ threads, userRole }: InboxListProps) {
   if (!threads || threads.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-16 border rounded-lg bg-muted/10">
